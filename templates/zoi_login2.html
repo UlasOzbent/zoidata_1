@@ -1,0 +1,68 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang=""en>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MovieBase</title>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+       {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <meta name="keywords" content="MovieBase"/>
+    <meta name="description" content="MovieBase"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/n.css')}}" rel="stylesheet"/>
+    
+
+</head>
+
+
+
+<section id= 'mainmenu'>
+    <div class= "name text-center">
+        {% if name %}
+                <h1>Hello {{ name }}!!</h1>
+                <br/>
+
+            {% else %}
+                <h1>Login</h1>
+                <p>No account yet? Here is the link for create one! <a href="{{ url_for('login') }}">Sign Up</a>
+                <br/>
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+
+                    <p> 
+                    {{ form.username(class="form-control", placeholder="Username") }} </p>
+                    <br/>
+
+                    <p>
+                    {{ form.password_hash(class="form-label", placeholder="Password") }} </p>
+
+                    <br/>
+                    
+                    {{ form.submit(class="btn btn-block")  }}
+
+                    {# class'lar bootstrap icin #}
+                </form>
+    </div>
+</section>
+
+<br></br>
+
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html lang=""en>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MovieBase</title>
+
+
+    <meta name="keywords" content="MovieBase"/>
+    <meta name="description" content="MovieBase"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/n.css')}}" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+</head>
+
+
+<section id='flashes'>
+    <div class= 'flashes'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+           {% endif %}
+        {% endwith %}
+        {% block body %}Welcome {{ username_ }}{% endblock %}
+    </div>
+</section>
+
+<div class="update_card">
+    <h2>
+    Update Profile </h2>
+
+    <form action="/n_profile_update" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        {{ form2.name.label(class="form-label") }}
+
+        {{ form2.name(class="form-control", value=name_to_update.name) }}
+        <br/>
+
+        {{ form.username.label(class="form-label") }}
+
+        {{ form.username(class="form-control", value=name_to_update.username) }}
+        <br/>
+
+        {{ form2.email.label(class="form-label") }}
+
+        {{ form2.email(class="form-control", value=name_to_update.email) }}
+    
+        <br/>
+
+        {{ form2.about_author.label(class="form-label") }}
+
+        <textarea name="about_author" class="form-control">{{ name_to_update.about_author }}</textarea>
+        <br/>
+
+        {{ form2.profile_pic.label(class="form-label") }}
+
+        {{ form2.profile_pic(class="form-control", value=name_to_update.profile_pic) }}
+        
+
+        <br/>
+        
+        {{ form2.submit(class="btn btn-secondary btn-sm") }}
+            
+
+        
+</div>
+
+</form>
+
+        
+
+
+{% endblock %}

@@ -1,0 +1,355 @@
+html{
+    font-family: "Kanit";
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-color:#F5FFFA;
+    background-color:hsla(39,0%,89%,1);
+    background-image:
+    radial-gradient(at 100% 8%, hsla(350,99%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 1% 95%, hsla(146,91%,69%,0.53) 0px, transparent 50%),
+    radial-gradient(at 2% 93%, hsla(195,70%,65%,0.66) 0px, transparent 50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a{
+	text-decoration: none;
+}
+
+.navbar {
+    color: yellow;
+}
+
+#navbar {
+    position: relative;
+    background:#E1FFFB;
+    border-color: #79A8A2;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 70px;
+    margin-top: -10px;
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+#navbar img{
+  max-width: 35px;
+  float: right;
+  border-radius: 100%;
+}
+
+#navbar ul{
+    padding-top: 5px;
+    list-style-type:none ;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+#navbar ul li a{
+    padding: 4rem;
+    color: #79A8A2;
+    
+}
+
+#navbar ul li a .dropbtn{
+    padding: 1.5rem;
+    color: #79A8A2;
+    
+}
+
+#navbar ul li i{
+    padding:  1rem;
+    color:  #79A8A2;
+}
+
+#navbar ul li a:hover{
+    background-color:#E1FFFB;
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+#navbar dropdown: hover .dropbtn{
+    background-color:#F0FFFF;
+    border-radius: 2px;
+}
+
+
+#navbar li.dropdown{
+    display: inline-block;
+}
+
+#navbar .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #E1FFFB;
+    border-radius: 2px;
+    min-width: 50px;
+    z-index: 1;
+}
+
+#navbar .dropdown-content a{
+    color: #79A8A2;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left ;
+}
+
+#navbar .dropdown-content a:hover {
+    background-color: #F0FFFF;
+}
+
+#navbar .dropdown:hover .dropdown-content{
+    display: block;
+}
+
+
+#mainmenu{
+  margin-left: auto;
+  width: 35%;
+  padding: 10px;
+  backdrop-filter:  blur(25px);
+  display: flex;
+  flex-basis: 50%;
+}
+
+#mainmenu .text-center{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem;
+    border: 10px solid transparent;
+    /*border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+    border-image-slice: 1;
+    background-color:#fff799;
+    background-image:
+    radial-gradient(at 55% 81%, hsla(231,82%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 67% 42%, hsla(111,77%,61%,1) 0px, transparent 50%),
+    radial-gradient(at 22% 92%, hsla(201,65%,60%,1) 0px, transparent 50%),
+    radial-gradient(at 85% 70%, hsla(108,65%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 63% 94%, hsla(182,73%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 7% 74%, hsla(299,65%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 27% 15%, hsla(173,93%,74%,1) 0px, transparent 50%);
+    */
+    backdrop-filter:  blur(125px);
+}
+
+#mainmenu .text-center h1{
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: white;
+    /*
+    background-color:#bd99ff;
+    background-image:
+    radial-gradient(at 64% 39%, hsla(254,69%,69%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 59%, hsla(133,64%,63%,1) 0px, transparent 50%),
+    radial-gradient(at 77% 58%, hsla(202,82%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 86% 27%, hsla(322,95%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 54% 28%, hsla(334,91%,67%,1) 0px, transparent 50%),
+    radial-gradient(at 52% 57%, hsla(193,81%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 74% 83%, hsla(3,89%,64%,1) 0px, transparent 50%);
+    width: 100%;
+    border: 2px solid pink;*/
+    border-radius: 4px;
+}
+
+#mainmenu .text-center p{
+    color: white;
+}
+
+#mainmenu .text-center p a{
+    color: #79A8A2;
+}
+
+#mainmenu .text-center .form-control{
+    width: 100%;
+    height: 35px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #79A8A2;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 20px;
+    resize: none
+}
+
+#mainmenu .form-label{
+    width: 100%;
+    height: 35px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1px solid #79A8A2;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 20px;
+    resize: none;
+    white-space: wrap;                          
+}
+
+/*
+#mainmenu .btn-block{
+  color: #F9F6EE;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 5px;
+  border-color: #ffdf99;
+ 
+  overflow: visible;
+  outline: none;
+  
+  
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+*/
+
+#mainmenu .btn-block{
+  border: 5px;
+  color:  white;
+  border-color: #ffdf99;
+  overflow: visible;
+  outline: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 15px;
+  width: 300px;
+  cursor: pointer;
+  position: relative;
+  height: 3rem;
+  border-radius: 1.5rem;
+  background-color:hsla(301,40%,83%,1);
+  background-image:
+  radial-gradient(at 89% 88%, hsla(76,0%,89%,1) 0px, transparent 50%),
+  radial-gradient(at 0% 98%, hsla(100,56%,60%,0.71) 0px, transparent 50%);
+  transition: all 0.3s;
+}
+
+#mainmenu .btn-block:hover{
+    background: transparent;
+    letter-spacing: 2px;
+}
+
+#mainmenu .btn-block::before {
+    top: 0;
+}
+#mainmenu .btn-block::after{
+    bottom: 0;
+}
+
+#mainmenu .btn-block:hover::before, .btn-block:hover::after{
+    transform: scaleX(1.0);
+}
+
+#mainmenu .btn-block::before, .btn-block::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: scaleX(0.0);
+    width: 100%;
+    height: 0.5px;
+    background: white;
+    transition: all 0.3s;
+}
+
+.navbar {
+    color: yellow;
+}
+
+footer {
+    position: relative;
+    background:#E1FFFB;
+    border-color: #79A8A2;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 92px;
+    margin-top: -35px;
+    margin-bottom: -20px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    
+    /*position: fixed;
+      width: 99%;*/
+}
+
+footer ul{
+    padding-top: 5px;
+    list-style-type:none ;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 375px;
+    color: #79A8A2;
+    
+}
+
+footer ul li{
+    padding-top: 2px;
+    justify-content: center;
+}
+
+
+
+footer ul li a{
+    padding: 1rem;
+    color: #79A8A2;
+    
+}
+
+.flashes {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Safari and Chrome */
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    background-color:#99ffb4;
+    background-image:
+    radial-gradient(at 88% 100%, hsla(29,91%,73%,1) 0px, transparent 50%),
+    radial-gradient(at 4% 100%, hsla(192,65%,65%,1) 0px, transparent 50%);
+    max-width: 250px;
+    top: 100px;
+
+
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}
+
+
+.rounded-top{
+
+      background-image: url("data:image/svg+xml;utf8,%3Csvg width=%22100%25%22 height=%22100%25%22 viewBox=%220 0 1000 600%22 version=%221.1%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22 %3E %3Cstyle%3E .box_shadow { box-shadow: -5px -5px 20px -10px %23e6c7f0; } .shadow_right { -webkit-filter: drop-shadow(-5px -5px 15px %23e6c7f0); filter: drop-shadow(-5px -5px 15px %23e6c7f0); } .shadow_left{ -webkit-filter: drop-shadow(5px 5px 15px %23e6c7f0); filter: drop-shadow(5px 5px 15px %23e6c7f0); } %3C%2Fstyle%3E %3Cdefs%3E %3ClinearGradient id=%22gradient__0%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E %3Cstop stop-color=%22%23e6c7f0%22 offset=%220.0%25%22 %2F%3E %3Cstop stop-color=%22%23eebbc9%22 offset=%2212.5%25%22 %2F%3E %3Cstop stop-color=%22%23e6b0e5%22 offset=%2225.0%25%22 %2F%3E %3Cstop stop-color=%22%2342e6cf%22 offset=%2237.5%25%22 %2F%3E %3Cstop stop-color=%22white%22 offset=%2250.0%25%22 %2F%3E %3Cstop stop-color=%22%2342e6cf%22 offset=%2262.5%25%22 %2F%3E %3Cstop stop-color=%22%23e6b0e5%22 offset=%2275.0%25%22 %2F%3E %3Cstop stop-color=%22%23eebbc9%22 offset=%2287.5%25%22 %2F%3E %3Cstop stop-color=%22%23e6c7f0%22 offset=%22100.0%25%22 %2F%3E %3C%2FlinearGradient%3E %3Cfilter id=%22grain%22 x=%22-500%22 y=%22-300%22 width=%222000%22 height=%221200%22 filterUnits=%22userSpaceOnUse%22%3E%3E %3CfeFlood flood-color=%22%23ffffff%22 result=%22neutral-gray%22 %2F%3E %3CfeTurbulence in=%22neutral-gray%22 type=%22fractalNoise%22 baseFrequency=%222.5%22 numOctaves=%22100%22 stitchTiles=%22stitch%22 result=%22noise%22 %2F%3E %3CfeColorMatrix in=%22noise%22 type=%22saturate%22 values=%220%22 result=%22destaturatedNoise%22 %3E%3C%2FfeColorMatrix%3E %3CfeComponentTransfer in=%22desaturatedNoise%22 result=%22theNoise%22%3E %3CfeFuncA type=%22table%22 tableValues=%220 0 1 0%22%3E%3C%2FfeFuncA%3E %3C%2FfeComponentTransfer%3E %3CfeBlend in=%22SourceGraphic%22 in2=%22theNoise%22 mode=%22soft-light%22 result=%22noisy-image%22 %2F%3E %3C%2Ffilter%3E} %3C%2Fdefs%3E %3Cg filter=%22url(%23grain)%22%3E %3Crect width=%221000%22 height=%22600%22 fill=%22%23e6c7f0%22%2F%3E %3Crect class=%22%22 id=%22rect__11%22 x=%22478.2608695652174%22 y=%22143.47826086956522%22 width=%2243.47826086956522%22 height=%22313.04347826086956%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__12%22 x=%22521.7391304347826%22 y=%22130.43478260869566%22 width=%2243.47826086956522%22 height=%22339.1304347826087%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__13%22 x=%22565.2173913043479%22 y=%22117.3913043478261%22 width=%2243.47826086956522%22 height=%22365.2173913043478%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__14%22 x=%22608.695652173913%22 y=%22104.34782608695653%22 width=%2243.47826086956522%22 height=%22391.30434782608694%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__15%22 x=%22652.1739130434783%22 y=%2291.30434782608697%22 width=%2243.47826086956522%22 height=%22417.39130434782606%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__16%22 x=%22695.6521739130435%22 y=%2278.2608695652174%22 width=%2243.47826086956522%22 height=%22443.4782608695652%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__17%22 x=%22739.1304347826087%22 y=%2265.21739130434781%22 width=%2243.47826086956522%22 height=%22469.5652173913044%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__18%22 x=%22782.6086956521739%22 y=%2252.17391304347825%22 width=%2243.47826086956522%22 height=%22495.6521739130435%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__19%22 x=%22826.0869565217391%22 y=%2239.13043478260869%22 width=%2243.47826086956522%22 height=%22521.7391304347826%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__20%22 x=%22869.5652173913044%22 y=%2226.086956521739125%22 width=%2243.47826086956522%22 height=%22547.8260869565217%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__21%22 x=%22913.0434782608696%22 y=%2213.043478260869563%22 width=%2243.47826086956522%22 height=%22573.9130434782609%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_left%22 id=%22rect__22%22 x=%22956.5217391304348%22 y=%220%22 width=%2243.47826086956522%22 height=%22600%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__10%22 x=%22434.7826086956522%22 y=%22130.43478260869566%22 width=%2243.47826086956522%22 height=%22339.1304347826087%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__9%22 x=%22391.30434782608694%22 y=%22117.3913043478261%22 width=%2243.47826086956522%22 height=%22365.2173913043478%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__8%22 x=%22347.82608695652175%22 y=%22104.34782608695652%22 width=%2243.47826086956522%22 height=%22391.304347826087%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__7%22 x=%22304.3478260869565%22 y=%2291.30434782608695%22 width=%2243.47826086956522%22 height=%22417.3913043478261%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__6%22 x=%22260.8695652173913%22 y=%2278.26086956521739%22 width=%2243.47826086956522%22 height=%22443.47826086956525%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__5%22 x=%22217.3913043478261%22 y=%2265.21739130434783%22 width=%2243.47826086956522%22 height=%22469.5652173913044%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__4%22 x=%22173.91304347826087%22 y=%2252.17391304347826%22 width=%2243.47826086956522%22 height=%22495.6521739130435%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__3%22 x=%22130.43478260869566%22 y=%2239.130434782608695%22 width=%2243.47826086956522%22 height=%22521.7391304347826%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__2%22 x=%2286.95652173913044%22 y=%2226.08695652173913%22 width=%2243.47826086956522%22 height=%22547.8260869565217%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__1%22 x=%2243.47826086956522%22 y=%2213.043478260869565%22 width=%2243.47826086956522%22 height=%22573.9130434782609%22 fill=%22url(%23gradient__0)%22 %2F%3E %3Crect class=%22shadow_right%22 id=%22rect__0%22 x=%220%22 y=%220%22 width=%2243.47826086956522%22 height=%22600%22 fill=%22url(%23gradient__0)%22 %2F%3E %3C%2Fg%3E %3C%2Fsvg%3E");
+      
+}
